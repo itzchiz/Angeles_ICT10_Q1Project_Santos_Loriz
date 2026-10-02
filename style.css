@@ -1,0 +1,319 @@
+/* L&B's Sari-sari — loud, flat, proudly Pinoy
+   Flat color blocks, tall condensed type, hard offset shadows, starburst stickers */
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;800&family=Courier+Prime:wght@400;700&display=swap');
+
+
+body {
+    margin: 0;
+    font-family: 'Archivo', sans-serif;
+    font-weight: 597;
+    color: #a8150d;
+    background-color: #5f0000c8;}
+
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 30px;
+    background-color: #ffd23f;
+    border-bottom: 3px solid #f03a17;}
+
+.navbar::after {
+    content: " ★ SARI-SARI ★ SARAP ★ SULIT ★ SARI-SARI ★ SARAP ★ SULIT ★ SARI-SARI ★ SARAP ★ SULIT ★ SARI-SARI ★ SARAP ★ SULIT★ SARI-SARI ★ SARAP ★ SULIT ★ SARI-SARI ★ SARAP ★ SULIT ★ SARI-SARI ★ SARAP ★ SULIT ★ SARI-SARI ★ SARAP ★ SULIT ★ SARI-SARI ★ SARAP ★ SULIT";
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 34px;
+    line-height: 34px;
+    white-space: nowrap;
+    font-family: 'Anton', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: #ffd23f;
+    background-color:#f03a17;
+    pointer-events:none;}
+
+.brand {
+    font-family: 'Anton', sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #f03a17}
+
+.nav-links a{
+    position: relative;
+    margin-left: 26px;
+    padding: 4px 0;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color:#f03a17;
+    transition: color 0.2s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 3px;
+    background-color: #f03a17;
+    transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    padding: 130px 16px 56px;}
+
+
+.card {
+    width: 100%;
+    max-width: 440px;
+    padding: 26px;
+    text-align: center;
+    background-color: #f4b9ef;
+    border: 3px solid#f03a17;
+    border-radius: 14px;
+    box-shadow: 8px 8px 0 #f03a17;
+}
+
+.card-header {
+    position: relative;
+    margin: 12px 0 26px;
+    padding: 18px 110px 16px 18px;
+    text-align: left;
+    background-color: #ffd23f;
+    border: 3px solid #f03a17;
+    border-radius: 10px;}
+
+.card-header h1 {
+    margin: 0;
+    font-family: 'Anton', sans-serif;
+    font-size: 2.6rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #f03a17;
+}
+
+/* starburst sticker that we used claude ai for...*/
+.icon {
+    position: absolute;
+    top: -34px;
+    right: -26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 118px;
+    height: 118px;
+    padding: 18px;
+    font-family: 'Anton', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: 0.5px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffd23f;
+    background-color: #f03a17;
+    transform: rotate(10deg);
+    clip-path: polygon(
+        50% 0%, 65.3% 13%, 85.4% 14.6%, 87% 34.7%, 100% 50%, 87% 65.3%,
+        85.4% 85.4%, 65.3% 87%, 50% 100%, 34.7% 87%, 14.6% 85.4%, 13% 65.3%,
+        0% 50%, 13% 34.7%, 14.6% 14.6%, 34.7% 13%
+    );
+       /*I watched an entire video to see how to animate this/code this part VVV i swear sir - brixen*/
+    animation: pulse 1s ease-in-out infinite alternate;
+}
+
+
+.field {
+    margin-bottom: 6px;
+    text-align: left;
+    box-sizing: border-box
+}
+
+.field label,
+.section-title {
+    display: block;
+    margin-bottom: 6px;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #f03a17;
+    text-align: left;
+    box-sizing: border-box
+}
+    
+
+.field input,
+.field select {
+    width: 100%;
+    padding: 11px 12px;
+    margin-bottom: 14px;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #5f000077;
+    background-color: #fffdf8;
+    border: 3px solid #f03a17;
+    border-radius: 10px;
+    box-sizing: border-box
+}
+
+::placeholder { color: #c98a85; }
+
+.field input:focus,
+.field select:focus,
+.menu-quantity:focus {
+    outline: none;
+    box-shadow: 4px 4px 0#f03a17;
+    box-sizing: border-box
+}
+
+/*receipt*/
+
+#menu-list { margin-bottom: 18px; }
+
+.menu-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 90px;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 2px solid #f03a17;
+    text-align: left;
+}
+
+.menu-item label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    font-family: 'Archivo', sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0;
+    text-transform: none;
+    color: #a8150d;
+    cursor: pointer;
+}
+
+.menu-item input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    margin: 0;
+    accent-color: #f03a17;}
+
+.menu-quantity {
+    width: 100%;
+    padding: 7px;
+    font-family: inherit;
+    font-weight: 800;
+    color: #a8150d;
+    background-color: #fffdf8;
+    border: 3px solid #f03a17;
+    border-radius: 10px;}
+
+.menu-quantity:disabled {
+    color: #b98a86;
+    background-color: #e8a5e2;
+    border-color: #d77a70;
+    cursor: not-allowed;
+}
+
+/* buttons */
+
+button,
+.btn {
+    width: 100%;
+    padding: 12px 22px;
+    font-family: 'Anton', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #f03a17;
+    background-color: #ffd23f;
+    border: 3px solid #f03a17;
+    border-radius: 999px;
+    box-shadow: 5px 5px 0 #f03a17;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;}
+
+button:hover,
+.btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0 #f03a17;
+}
+
+button:active,
+.btn:active {
+    transform: translate(5px, 5px);
+    box-shadow: 0 0 0 #f03a17;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #5f0000;
+    outline-offset: 3px;}
+
+
+.error {
+    min-height: 1.2em;
+    margin: 12px 0 0;
+    font-weight: 800;
+    color: #f03a17;}
+
+/* resibo  */
+.result {
+    margin-top: 24px;
+    padding: 18px 16px;
+    font-family: 'Courier Prime', monospace;
+    font-size: 0.98rem;
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: left;
+    color: #a8150d;
+    background-color: #fffdf8;
+    border: 3px solid #f03a17;
+    border-radius: 6px;}
+
+.receipt-result {
+    white-space: pre-wrap;
+}
+
+@media (max-width: 480px) {
+    .navbar { padding: 12px 16px; justify-content: center; }
+    .nav-links a:first-child { margin-left: 0; }
+    .card { padding: 18px; }
+    .card-header { padding-right: 90px; }
+    .card-header h1 { font-size: 2rem; }
+    .icon { width: 96px; height: 96px; padding: 14px; right: -18px; font-size: 0.75rem; }
+    #main { padding-top: 150px; }
+}
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

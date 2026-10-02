@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKU Generator</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <span class="brand">L&B's Sari-sari</span>
+    <div class="nav-links">
+      <a href="index.html" class="active">SKU Generator</a>
+      <a href="receipt.html">Receipt Generator</a>
+    </div>
+  </nav>
+
+<div id="main">
+    <div class="card">
+
+      <div class="card-header">
+        <div class="icon">Sulit Sarap</div>
+        <h1>SKU Generator</h1>
+      </div>
+
+        <div>
+          <form id="sku-form">
+            <div class="field">
+              <label for="category">Category</label>
+            <select id="category">
+              <option value="Keychains">Ulam</option>
+              <option value="Beverages">Beverages</option>
+              <option value="Snacks">Snacks</option>
+              <option value="Baggies">Candy</option>
+            </select>
+        </div>
+          
+        <div class="field">
+              <label for="product-name">Product Name</label>
+              <input type="text" id="product-name" placeholder="Bottoled wotah" maxlength="40">
+            </div>
+
+            <div class="field">
+              <label for="quantity">Stock Quantity</label>
+              <input type="number" id="quantity" placeholder="fifety">
+            </div>
+
+            <button type="button" class="btn" py-click="click">Generate SKU</button>
+          </form>
+          <br>
+          <br>
+          <div class="result" id="output">
+            Your generated SKU will appear here.
+            </div>
+        </div>
+  </div>
+</div>
+
+<py-script src="sku.py"></py-script>
+</body>
+</html>
